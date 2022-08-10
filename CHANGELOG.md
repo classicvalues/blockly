@@ -1,5 +1,73 @@
 # Changelog
 
+## [9.0.0](https://github.com/google/blockly/compare/blockly-v8.0.0...blockly-v9.0.0) (2022-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **build:** compile to ES2015 instead of ES5 (#6335)
+* Move backwards-compatibility hacks to main.js (#6260)
+* Remove remaining use of `goog.module.declareLegacyNamespace`. (#6254)
+* properly add the removal of utils.global to the renamings file. (#6204)
+* fix or silence type errors (#6105)
+
+### Features
+
+* Add margin around zoomToFit ([#6042](https://github.com/google/blockly/issues/6042)) ([a202558](https://github.com/google/blockly/commit/a202558950ce9b06825447ec79bbe9960f451715))
+* **build:** Support TypeScript in `core/` ([#6220](https://github.com/google/blockly/issues/6220)) ([4070ffc](https://github.com/google/blockly/commit/4070ffc419baca9907c671a9190ce93b2e5e3b63))
+* creates a new way to add shortcut key mappings ([#6122](https://github.com/google/blockly/issues/6122)) ([adb5ad1](https://github.com/google/blockly/commit/adb5ad1f3f350db5ae56404408b402376f1d94e5))
+* make isMutator public ([#6316](https://github.com/google/blockly/issues/6316)) ([8f4b49a](https://github.com/google/blockly/commit/8f4b49a7717a1ba20edad0a446d122ada7fbaa82))
+* updates accessors for getMainWorkspace and getSelected ([#6313](https://github.com/google/blockly/issues/6313)) ([fd127f6](https://github.com/google/blockly/commit/fd127f6b6093b8547a7ba703c44c917624f078da))
+
+
+### Bug Fixes
+
+* add compose and decompose to block ([#6102](https://github.com/google/blockly/issues/6102)) ([619ee66](https://github.com/google/blockly/commit/619ee66b23967b26b5a25225a640be7915a741c7))
+* add timeouts to delay expensive mutation operations ([#6149](https://github.com/google/blockly/issues/6149)) ([91b570a](https://github.com/google/blockly/commit/91b570ace55d610a63d7e5a3f30b6fc0dfc56630))
+* Check for empty array in thrasos.RenderInfo.addElemSpacing_ ([#6211](https://github.com/google/blockly/issues/6211)) ([16b5ccd](https://github.com/google/blockly/commit/16b5ccd2eaed64ddf6da170b4398e79ef1ac3120))
+* component id should be on the prototype ([#6104](https://github.com/google/blockly/issues/6104)) ([172a8ce](https://github.com/google/blockly/commit/172a8ce2127e3e945e2243c765b261e382691580))
+* dragging fails for collapsed blocks with Icons, which have been … ([#6081](https://github.com/google/blockly/issues/6081)) ([5240301](https://github.com/google/blockly/commit/5240301611b51801d20d30b61cba69ef7bc08e8f))
+* Fix compilation errors under Closure's strict mode ([#6073](https://github.com/google/blockly/issues/6073)) ([edc2a5c](https://github.com/google/blockly/commit/edc2a5cd0c717e521e8f98b2a3fb6bde061da241))
+* fix message loading from script tags ([#6060](https://github.com/google/blockly/issues/6060)) ([44edbb8](https://github.com/google/blockly/commit/44edbb89c35e4d24144333bf504bf045fa639cce))
+* fix or silence type errors ([#6105](https://github.com/google/blockly/issues/6105)) ([daf78af](https://github.com/google/blockly/commit/daf78af13e5ce7cebefd0e7596f63e8644c324ba))
+* improve types in touch code ([#6099](https://github.com/google/blockly/issues/6099)) ([7c7cfbe](https://github.com/google/blockly/commit/7c7cfbea63b6cc4a0f5d93687ef56c0686a3b1f2))
+* Increases the  speed of deleting blocks ([#6128](https://github.com/google/blockly/issues/6128)) ([71e8356](https://github.com/google/blockly/commit/71e835672703237deb0d1adf2d551cc9b114f443))
+* inject function options dictionary has wrong type definition ([#6231](https://github.com/google/blockly/issues/6231)) ([233cce8](https://github.com/google/blockly/commit/233cce888391974375cde14af13d6023512cdbba))
+* JSON deserialization fails (bug [#6091](https://github.com/google/blockly/issues/6091)) (collapsed procedure call… ([#6103](https://github.com/google/blockly/issues/6103)) ([45c36f8](https://github.com/google/blockly/commit/45c36f898202ab850d973d0f4147e15b6782d358))
+* json hooks for lists blocks not needing extra state ([#6177](https://github.com/google/blockly/issues/6177)) ([8b69b61](https://github.com/google/blockly/commit/8b69b61c566d3c96e44761ca19d60cfb467d6a4b))
+* json serialize lists_getIndex with json extraState ([#6136](https://github.com/google/blockly/issues/6136)) ([#6170](https://github.com/google/blockly/issues/6170)) ([0afff23](https://github.com/google/blockly/commit/0afff23d49dcdd29db6a42f9b0e16afeb4b2c43d))
+* loading messages from script tags. ([#6184](https://github.com/google/blockly/issues/6184)) ([2a7d6b0](https://github.com/google/blockly/commit/2a7d6b08b585d4a6553565920785b7e8225607f5))
+* Made workspace non-nullable. ([#6300](https://github.com/google/blockly/issues/6300)) ([83a3e74](https://github.com/google/blockly/commit/83a3e74ec95c5c6ff18a575e5b653d6535d78244))
+* Make generator types and BlockDefinition less restrictive ([#6185](https://github.com/google/blockly/issues/6185)) ([2ff4f88](https://github.com/google/blockly/commit/2ff4f88f244a4a8670f5c87da1f087a0eaee7a2c))
+* Make message files work in unpackaged mode, and rebuild msg files ([4b1bb8c](https://github.com/google/blockly/commit/4b1bb8c7b6f540fa2948b072984ad32935f7d1fe))
+* Move backwards-compatibility hacks to main.js ([#6260](https://github.com/google/blockly/issues/6260)) ([aaafbc2](https://github.com/google/blockly/commit/aaafbc2b6f9b4786db58e831919fad59a2a61dd8))
+* mutators disconnecting from children instead of moving them ([#6047](https://github.com/google/blockly/issues/6047)) ([493444c](https://github.com/google/blockly/commit/493444c687eb01d2bd3d8064f23e66d1879c053c))
+* options parser should add trailing slash to 'media' if not present. ([#6263](https://github.com/google/blockly/issues/6263)) ([#6264](https://github.com/google/blockly/issues/6264)) ([bf1a40c](https://github.com/google/blockly/commit/bf1a40c36bad8ada4a69d5ef304a68ed3da2694a))
+* packaging .d.ts files ([#6327](https://github.com/google/blockly/issues/6327)) ([c8dd01a](https://github.com/google/blockly/commit/c8dd01ac87145a6979e93f42738866b5c034331c))
+* provide initial values to reduce functions in generated js ([#6178](https://github.com/google/blockly/issues/6178)) ([706c2bf](https://github.com/google/blockly/commit/706c2bfd41088fdca783f2fc1f152453f91fc784))
+* Remove float() coercion in Python loops ([#6259](https://github.com/google/blockly/issues/6259)) ([5612e13](https://github.com/google/blockly/commit/5612e13824dae09018b61466141b4b5f380c107f))
+* remove vestigial dependency ([#6219](https://github.com/google/blockly/issues/6219)) ([334956b](https://github.com/google/blockly/commit/334956be9b0ee11f57e38fcac3d55c9237727ead))
+* replace `object.mixin` with `Object.assign` ([#6138](https://github.com/google/blockly/issues/6138)) ([df41c23](https://github.com/google/blockly/commit/df41c234b73982045423b448d0a97f0f7a1ba164))
+* reuse the 'bumpObjects' module in inject.js ([#6121](https://github.com/google/blockly/issues/6121)) ([df8349c](https://github.com/google/blockly/commit/df8349c6709d043c1806ef87b8867dbfc9ee05be))
+* Silence Closure errors when modifying tooltips. ([#6098](https://github.com/google/blockly/issues/6098)) ([29b6b87](https://github.com/google/blockly/commit/29b6b878dc621acd6e11c34aec2e3bce25bb2508))
+* **tests:** Fix race condition causing flakiness in PHP generator test ([#6213](https://github.com/google/blockly/issues/6213)) ([d7ab815](https://github.com/google/blockly/commit/d7ab81504c2fac2d446fd84db084a77d1203bd18))
+* Theme.name does not match registered name ([#6186](https://github.com/google/blockly/issues/6186)) ([#6226](https://github.com/google/blockly/issues/6226)) ([9797943](https://github.com/google/blockly/commit/9797943938583afb6c787ad59d9ae79be73346fe))
+* type error in uneditable bubbles ([#6092](https://github.com/google/blockly/issues/6092)) ([7353c61](https://github.com/google/blockly/commit/7353c61b2b7ee3b5e6b60b061e1414f29f01f596))
+* update extraState property in serializer typedefs ([#6057](https://github.com/google/blockly/issues/6057)) ([55cae6e](https://github.com/google/blockly/commit/55cae6ec857a5ead1cd5306095fbbe876d2618af))
+* Update readme and remove travis build badge ([e65835c](https://github.com/google/blockly/commit/e65835ca3240f9c4b29e24863999a32631ecac31))
+* Update typescript definition files for core, blocks, and generators ([#6174](https://github.com/google/blockly/issues/6174)) ([87aa4c0](https://github.com/google/blockly/commit/87aa4c0f625e3a2c99c149c6095f32c20116de7c))
+
+
+### Code Refactoring
+
+* Remove remaining use of `goog.module.declareLegacyNamespace`. ([#6254](https://github.com/google/blockly/issues/6254)) ([f947b3f](https://github.com/google/blockly/commit/f947b3f4f669660faf46dd82c374e893b7f9acce))
+
+
+### Miscellaneous Chores
+
+* **build:** compile to ES2015 instead of ES5 ([#6335](https://github.com/google/blockly/issues/6335)) ([f032151](https://github.com/google/blockly/commit/f032151cd9c7138fde29d1ca308a714322d751ef))
+* properly add the removal of utils.global to the renamings file. ([#6204](https://github.com/google/blockly/issues/6204)) ([2f734f7](https://github.com/google/blockly/commit/2f734f7f17879296188c542d4a06f01902cde53a))
+
 ## [8.0.0](https://github.com/google/blockly/compare/blockly-v7.20211209.0...blockly-v8.0.0) (2022-03-31)
 
 
